@@ -1,4 +1,4 @@
-﻿/* -----------------------------------------------------------------------------
+/* -----------------------------------------------------------------------------
    RASMERK.COM � Main Stylesheet
    Theme: Dark Navy + Teal | Font: Inter | Material: Glassmorphism
 ----------------------------------------------------------------------------- */
@@ -15,7 +15,7 @@
   --bg-card:       rgba(15, 21, 37, 0.7);
   --bg-card-hover: rgba(20, 28, 50, 0.85);
   --text-primary:  #e8edf5;
-  --text-secondary:#9aa5bc;
+  --text-secondary:#9ca3af;
   --text-muted:    #5a6580;
   --border:        rgba(255, 255, 255, 0.07);
   --border-teal:   rgba(0, 180, 166, 0.3);
@@ -38,6 +38,7 @@ body {
 img { max-width: 100%; display: block; }
 a { color: inherit; text-decoration: none; }
 ul { list-style: none; }
+:focus-visible { outline: 2px solid var(--teal); outline-offset: 2px; }
 
 .gradient-text {
   background: linear-gradient(135deg, var(--teal-light) 0%, #7dd3fc 100%);
@@ -205,6 +206,11 @@ footer { border-top: 1px solid var(--border); padding: 32px 0; position: relativ
   .stat-grid { grid-template-columns: 1fr 1fr; }
   .footer-inner { flex-direction: column; text-align: center; }
   .contact-links { flex-direction: column; align-items: center; }
+}
+@media (max-width: 768px) {
+  .nav-inner { padding: 0 16px; }
+  .nav-logo { font-size: 1rem; }
+  .nav-hamburger { display: flex; margin-left: auto; }
 }
 
 /* v2 Layout Updates */
