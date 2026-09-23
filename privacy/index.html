@@ -3,9 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Privacy Policy — Rasmerk</title>
+  <title>Privacy Policy - Rasmerk</title>
   <meta name="description" content="Privacy Policy for Money Manager by Rasmerk." />
   <link rel="canonical" href="https://rasmerk.com/privacy" />
+  <link rel="icon" type="image/png" href="../assets/rasmerk_logo.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
@@ -22,6 +23,10 @@
     .legal-body a { color: var(--teal); text-decoration: underline; }
     .back-link { display: inline-flex; align-items: center; gap: 8px; color: var(--text-secondary); font-size: 0.875rem; font-weight: 500; margin-bottom: 40px; transition: color 0.2s; }
     .back-link:hover { color: var(--teal); }
+    .legal-table { width: 100%; border-collapse: collapse; margin: 16px 0 24px; font-size: 0.9rem; }
+    .legal-table th { text-align: left; padding: 10px 14px; background: rgba(255,255,255,0.04); color: var(--text-primary); font-weight: 600; border-bottom: 1px solid rgba(255,255,255,0.08); }
+    .legal-table td { padding: 10px 14px; color: var(--text-secondary); border-bottom: 1px solid rgba(255,255,255,0.05); vertical-align: top; line-height: 1.6; }
+    .legal-table tr:last-child td { border-bottom: none; }
   </style>
 </head>
 <body>
@@ -49,12 +54,14 @@
       <div class="legal-header">
         <p class="section-eyebrow">Legal</p>
         <h1>Privacy Policy</h1>
-        <p>Last updated: August 2026</p>
+        <p>Last updated: September 2026</p>
       </div>
       <div class="legal-body">
         <p>Rasmerk ("we", "our", or "us") operates the Money Manager mobile application (the "App"). This Privacy Policy explains how we handle your information when you use our App.</p>
+
         <h2>1. Data Collection</h2>
         <p>Money Manager is designed as an <strong>offline-first, privacy-first</strong> application. We collect <strong>no personal data</strong> on our servers. All data you enter or import (transactions, accounts, categories, budgets) is stored exclusively on your own device in a local SQLite database.</p>
+
         <h2>2. Data You Provide</h2>
         <ul>
           <li>Transaction data (amounts, merchants, dates, categories)</li>
@@ -62,25 +69,73 @@
           <li>Budget limits and categories</li>
           <li>Friends and loan records</li>
         </ul>
-        <p>This data never leaves your device unless you explicitly use the Export feature to share a file.</p>
+        <p>This data never leaves your device unless you explicitly use the Export feature to share a file or choose to back up to Google Drive.</p>
+
         <h2>3. SMS Access</h2>
-        <p>On Android, the App requests permission to read your SMS inbox to automatically detect and import bank and UPI transaction messages. This processing happens entirely on your device. No SMS content is transmitted to any external server.</p>
-        <h2>4. Gmail Access</h2>
-        <p>If you choose to use the Gmail Import feature, you will be asked to sign in with Google. The App uses the Gmail API to read emails matching financial transaction patterns. These emails are processed on-device. We do not store, transmit, or retain any Gmail content on our servers.</p>
-        <h2>5. Camera &amp; Photos</h2>
-        <p>The Screenshot OCR feature uses your device camera or photo gallery to extract transaction information using Google ML Kit's on-device text recognition. No images are uploaded to any server.</p>
+        <p>On Android, the App requests permission to read your SMS inbox to automatically detect and import bank and UPI transaction messages. This processing happens entirely on your device. No SMS content is transmitted to any external server. This permission is optional - you may decline it and use manual entry instead.</p>
+
+        <h2>4. Camera and Photos</h2>
+        <p>The Receipt OCR feature uses your device camera or photo gallery to extract transaction information using Google ML Kit's on-device text recognition. Receipt images are processed locally and are not uploaded to Rasmerk servers or any external service.</p>
+
+        <h2>5. Permissions Summary</h2>
+        <table class="legal-table">
+          <thead>
+            <tr><th>Permission</th><th>Purpose</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>SMS</td><td>Detect and import bank transaction SMS automatically. Optional - you may decline.</td></tr>
+            <tr><td>Camera / Photos</td><td>Scan receipts with ML Kit OCR for automatic transaction extraction. Optional.</td></tr>
+            <tr><td>Notifications</td><td>Daily reminders and budget alerts. Optional - you may disable in device settings.</td></tr>
+          </tbody>
+        </table>
+
         <h2>6. Third-Party Services</h2>
-        <p>The App uses the following third-party SDKs which have their own privacy policies:</p>
-        <ul>
-          <li>Google Sign-In / Gmail API (Google LLC)</li>
-          <li>Google ML Kit Text Recognition (Google LLC)</li>
-        </ul>
+        <p>The App uses the following third-party SDKs, each with their own privacy policies:</p>
+        <table class="legal-table">
+          <thead>
+            <tr><th>Service</th><th>Purpose and Data Collected</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Google AdMob</td>
+              <td>Shows ads in the free version of the App. May use the Advertising ID for ad delivery and fraud prevention. See <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a>.</td>
+            </tr>
+            <tr>
+              <td>Firebase Analytics</td>
+              <td>Anonymous usage analytics only (e.g., which screens are visited, feature usage counts). No transaction amounts, merchant names, SMS contents, receipt text, bank account numbers, or personal financial data are collected.</td>
+            </tr>
+            <tr>
+              <td>Firebase Crashlytics</td>
+              <td>Crash diagnostics only. Collects device model, OS version, and stack traces when the app crashes. Financial data is excluded from crash reports.</td>
+            </tr>
+            <tr>
+              <td>Firebase Performance Monitoring</td>
+              <td>Collects app performance metrics such as app start time and screen render times. No personal or financial data.</td>
+            </tr>
+            <tr>
+              <td>Google Drive API</td>
+              <td>Optional encrypted backup stored in your private appDataFolder - a hidden storage area invisible to other apps and not visible in your Google Drive UI. Activated only when you explicitly choose to back up. Restore is always available for free users.</td>
+            </tr>
+            <tr>
+              <td>Google Play Billing</td>
+              <td>Processes subscriptions and one-time purchases (Premium). Payment details are handled entirely by Google Play. Rasmerk does not receive or store your payment information.</td>
+            </tr>
+            <tr>
+              <td>Google ML Kit</td>
+              <td>On-device text recognition for receipt scanning. No images or text are uploaded to any server. Processing is fully local.</td>
+            </tr>
+          </tbody>
+        </table>
+
         <h2>7. Data Security</h2>
-        <p>Your data is stored locally on your device. You can enable PIN or biometric protection via the App Lock feature. We recommend enabling this feature and keeping your device secure.</p>
+        <p>Your data is stored locally on your device. You can enable PIN or biometric protection via the App Lock feature. We recommend enabling this feature and keeping your device secure. Google Drive backups are encrypted before upload.</p>
+
         <h2>8. Children's Privacy</h2>
         <p>The App is not directed to children under 13. We do not knowingly collect personal information from children.</p>
+
         <h2>9. Changes to This Policy</h2>
         <p>We may update this Privacy Policy from time to time. We will update the "Last updated" date at the top of this page when we do so.</p>
+
         <h2>10. Contact</h2>
         <p>If you have any questions about this Privacy Policy, please contact us at <a href="mailto:support@rasmerk.com">support@rasmerk.com</a>.</p>
       </div>
@@ -91,7 +146,7 @@
     <div class="container footer-inner">
       <span class="footer-brand">Rasmerk</span>
       <span class="footer-copy">&copy; 2026 Rasmerk. All rights reserved.</span>
-      <nav class="footer-links"><a href="/privacy">Privacy Policy</a><a href="/terms">Terms of Service</a></nav>
+      <nav class="footer-links" aria-label="Legal links"><a href="/privacy">Privacy Policy</a><a href="/terms">Terms of Service</a></nav>
     </div>
   </footer>
   <script src="../scripts/main.js" defer></script>

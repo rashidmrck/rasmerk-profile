@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Rasmerk Money Manager - Getting the app...</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <script>
+    (function () {
+      // Extract referral code from URL path: /r/RM7K2P9D -> RM7K2P9D
+      var path = window.location.pathname;
+      var segments = path.split('/').filter(Boolean); // ['r', 'RM7K2P9D']
+      var code = (segments.length >= 2) ? segments[1] : '';
+
+      var playStoreBase = 'https://play.google.com/store/apps/details'
+        + '?id=com.rasmerk.money_manager';
+
+      var destination;
+      if (code) {
+        // Full UTM attribution so Play Store Install Referrer API passes the code to the app
+        var referrer = encodeURIComponent(
+          'utm_source=rasmerk'
+          + '&utm_medium=referral'
+          + '&utm_campaign=ambassador'
+          + '&utm_content=' + code
+        );
+        destination = playStoreBase + '&referrer=' + referrer;
+      } else {
+        // No code - safe fallback, still lands on Play Store
+        destination = playStoreBase;
+      }
+
+      window.location.replace(destination);
+    })();
+  </script>
+  <style>
+    body { font-family: system-ui, sans-serif; background: #0d1117; color: #8b949e; display: flex; align-items: center; justify-content: center; min-height: 100vh; margin: 0; }
+    .wrap { text-align: center; }
+    .spinner { width: 40px; height: 40px; border: 3px solid rgba(0,180,166,0.2); border-top-color: #00b4a6; border-radius: 50%; animation: spin 0.8s linear infinite; margin: 0 auto 20px; }
+    @keyframes spin { to { transform: rotate(360deg); } }
+    p { font-size: 0.95rem; }
+    a { color: #00b4a6; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="spinner"></div>
+    <p>Taking you to the Play Store...</p>
+    <p style="margin-top:8px; font-size:0.8rem;"><a href="https://play.google.com/store/apps/details?id=com.rasmerk.money_manager">Click here if not redirected</a></p>
+  </div>
+</body>
+</html>

@@ -38,6 +38,7 @@
         <p class="hero-tagline">Personal finance, automated and intelligent.</p>
         <p class="hero-subtext" style="color: var(--text-secondary); margin-bottom: 2rem;">Privacy-First &middot; Automated &middot; Intelligent</p>
         <div class="hero-actions">
+          <!-- TODO: Update href to Play Store URL once app is published: https://play.google.com/store/apps/details?id=com.rasmerk.money_manager -->
           <a href="#" class="btn-playstore">
             <svg viewBox="0 0 24 24" fill="currentColor" width="28" height="28"><path d="M5 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2l15-10L5 2zm1 4.3L15.5 12 6 17.7V6.3z"/></svg>
             <div class="playstore-text">
@@ -69,7 +70,7 @@
         <div class="diff-icon">📥</div>
         <div class="diff-text">
           <h4>Smart Sync</h4>
-          <p>Auto-import from SMS, Gmail, and OCR.</p>
+          <p>Auto-import from SMS and Receipt OCR.</p>
         </div>
       </div>
       <div class="diff-card">
@@ -92,20 +93,28 @@
       <div class="interactive-showcase reveal reveal-delay-1">
         <div class="showcase-sidebar">
           <div class="showcase-tab active" data-img="assets/screenshot_dashboard.jpg">
-            <h4>📊 Dashboard & Analytics</h4>
-            <p>Track your net worth and monthly burn rate in real time.</p>
+            <h4>Dashboard &amp; Analytics</h4>
+            <p>Track net worth and monthly spend in real time.</p>
           </div>
           <div class="showcase-tab" data-img="assets/screenshot_dashboard.jpg">
-            <h4>💰 Smart Budgets</h4>
+            <h4>SMS Auto-Import</h4>
+            <p>Background parsing from 10+ banks. Zero manual entry.</p>
+          </div>
+          <div class="showcase-tab" data-img="assets/screenshot_dashboard.jpg">
+            <h4>Receipt OCR &amp; Split</h4>
+            <p>Scan receipts with ML Kit. Split bills automatically.</p>
+          </div>
+          <div class="showcase-tab" data-img="assets/screenshot_dashboard.jpg">
+            <h4>Smart Budgets</h4>
             <p>Set limits and get safe-to-spend signals automatically.</p>
           </div>
           <div class="showcase-tab" data-img="assets/screenshot_dashboard.jpg">
-            <h4>📥 Automatic Sync</h4>
-            <p>Background SMS import parsing 10+ banks effortlessly.</p>
+            <h4>Multi-Currency</h4>
+            <p>Live FX rates. 8+ currencies. Fully offline.</p>
           </div>
           <div class="showcase-tab" data-img="assets/screenshot_dashboard.jpg">
-            <h4>👥 Friends Ledger</h4>
-            <p>Track loans and IOUs directly within the app.</p>
+            <h4>Friends &amp; Loans</h4>
+            <p>Track IOUs and loans directly in the app.</p>
           </div>
         </div>
         
@@ -130,8 +139,10 @@
       <div class="screenshots-tabs reveal reveal-delay-1">
         <div class="ss-tab-bar">
           <button class="ss-tab active" data-ss="assets/screenshot_dashboard.jpg">Dashboard</button>
-          <button class="ss-tab" data-ss="assets/screenshot_dashboard.jpg">Budget</button>
           <button class="ss-tab" data-ss="assets/screenshot_dashboard.jpg">SMS Import</button>
+          <button class="ss-tab" data-ss="assets/screenshot_dashboard.jpg">Receipt OCR</button>
+          <button class="ss-tab" data-ss="assets/screenshot_dashboard.jpg">Budgets</button>
+          <button class="ss-tab" data-ss="assets/screenshot_dashboard.jpg">Multi-Currency</button>
           <button class="ss-tab" data-ss="assets/screenshot_dashboard.jpg">Friends</button>
         </div>
         <div class="ss-phone-wrap">
@@ -140,9 +151,7 @@
             <img src="assets/screenshot_dashboard.jpg" id="ss-image" class="phone-screen" alt="App Screenshot" />
           </div>
         </div>
-        <p style="text-align:center; color:var(--text-secondary); font-size:0.85rem; margin-top:24px; opacity:0.6;">
-          📸 Real screenshots coming soon &mdash; replace placeholders with your app screenshots
-        </p>
+        
       </div>
     </div>
   </section>
@@ -163,7 +172,7 @@
             <span class="chip">Dart</span>
             <span class="chip">SQLite</span>
             <span class="chip">Google ML Kit</span>
-            <span class="chip">Gmail API</span>
+
             <span class="chip">Clean Architecture</span>
             <span class="chip">Material 3</span>
           </div>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Rasmerk</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <script>
+    (function () {
+      // GitHub Pages serves this 404.html for all unknown paths.
+      // Used as a client-side router for /r/:code referral links.
+      var path = window.location.pathname;
+
+      if (path.indexOf('/r/') === 0 || path === '/r') {
+        // Referral redirect path
+        var segments = path.split('/').filter(Boolean); // ['r', 'CODE']
+        var code = (segments.length >= 2) ? segments[1] : '';
+
+        var playStoreBase = 'https://play.google.com/store/apps/details'
+          + '?id=com.rasmerk.money_manager';
+
+        var destination;
+        if (code) {
+          var referrer = encodeURIComponent(
+            'utm_source=rasmerk'
+            + '&utm_medium=referral'
+            + '&utm_campaign=ambassador'
+            + '&utm_content=' + code
+          );
+          destination = playStoreBase + '&referrer=' + referrer;
+        } else {
+          destination = playStoreBase;
+        }
+
+        window.location.replace(destination);
+      } else {
+        // Not a referral path - show 404 page (rendered below)
+        document.getElementById('not-found').style.display = 'block';
+        document.getElementById('redirecting').style.display = 'none';
+      }
+    })();
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Inter', system-ui, sans-serif; background: #0d1117; color: #c9d1d9; display: flex; align-items: center; justify-content: center; min-height: 100vh; }
+    .wrap { text-align: center; padding: 40px 20px; }
+    .spinner { width: 40px; height: 40px; border: 3px solid rgba(0,180,166,0.2); border-top-color: #00b4a6; border-radius: 50%; animation: spin 0.8s linear infinite; margin: 0 auto 20px; }
+    @keyframes spin { to { transform: rotate(360deg); } }
+    .code { font-size: 6rem; font-weight: 800; color: #00b4a6; line-height: 1; }
+    h1 { font-size: 1.5rem; font-weight: 600; margin: 12px 0 8px; color: #e6edf3; }
+    p { color: #8b949e; font-size: 0.95rem; }
+    a { color: #00b4a6; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .btn { display: inline-block; margin-top: 24px; padding: 10px 24px; background: #00b4a6; color: #0d1117; font-weight: 600; border-radius: 8px; font-size: 0.9rem; }
+    .btn:hover { background: #00c9ba; text-decoration: none; }
+    #not-found { display: none; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div id="redirecting">
+      <div class="spinner"></div>
+      <p>Taking you to the Play Store...</p>
+      <p style="margin-top:8px; font-size:0.8rem;"><a href="https://play.google.com/store/apps/details?id=com.rasmerk.money_manager">Click here if not redirected</a></p>
+    </div>
+    <div id="not-found">
+      <div class="code">404</div>
+      <h1>Page not found</h1>
+      <p>This page doesn't exist or has been moved.</p>
+      <a href="/" class="btn">Back to Rasmerk</a>
+    </div>
+  </div>
+</body>
+</html>
