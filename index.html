@@ -95,27 +95,27 @@
       
       <div class="interactive-showcase reveal reveal-delay-1">
         <div class="showcase-sidebar">
-          <div class="showcase-tab active" data-img="assets/screenshot_dashboard.jpg">
+          <div class="showcase-tab active" data-img="assets/screenshot_dashboard.png">
             <h4>Dashboard &amp; Analytics</h4>
             <p>Track net worth and monthly spend in real time.</p>
           </div>
-          <div class="showcase-tab" data-img="assets/screenshot_sms.jpg">
+          <div class="showcase-tab" data-img="assets/screenshot_transactions.png">
             <h4>SMS Auto-Import</h4>
             <p>Background parsing from 10+ banks. Zero manual entry.</p>
           </div>
-          <div class="showcase-tab" data-img="assets/screenshot_ocr.jpg">
+          <div class="showcase-tab" data-img="assets/screenshot_ocr.png">
             <h4>Receipt OCR &amp; Split</h4>
             <p>Scan receipts with ML Kit. Split bills automatically.</p>
           </div>
-          <div class="showcase-tab" data-img="assets/screenshot_budgets.jpg">
+          <div class="showcase-tab" data-img="assets/screenshot_budgets.png">
             <h4>Smart Budgets</h4>
             <p>Set limits and get safe-to-spend signals automatically.</p>
           </div>
-          <div class="showcase-tab" data-img="assets/screenshot_multicurrency.jpg">
+          <div class="showcase-tab" data-img="assets/screenshot_accouts.png">
             <h4>Multi-Currency</h4>
             <p>Live FX rates. 8+ currencies. Fully offline.</p>
           </div>
-          <div class="showcase-tab" data-img="assets/screenshot_friends.jpg">
+          <div class="showcase-tab" data-img="assets/screenshot_friends.png">
             <h4>Friends &amp; Loans</h4>
             <p>Track IOUs and loans directly in the app.</p>
           </div>
@@ -124,7 +124,7 @@
         <div class="showcase-phone-area">
           <div class="phone-frame">
             <div class="phone-notch"></div>
-            <img src="assets/screenshot_dashboard.jpg" alt="Money Manager Dashboard Screenshot" id="showcase-image" class="phone-screen" />
+            <img src="assets/screenshot_dashboard.png" alt="Money Manager Dashboard Screenshot" id="showcase-image" class="phone-screen" />
           </div>
         </div>
       </div>
@@ -141,17 +141,17 @@
       </div>
       <div class="screenshots-tabs reveal reveal-delay-1">
         <div class="ss-tab-bar">
-          <button class="ss-tab active" data-ss="assets/screenshot_dashboard.jpg">Dashboard</button>
-          <button class="ss-tab" data-ss="assets/screenshot_sms.jpg">SMS Import</button>
-          <button class="ss-tab" data-ss="assets/screenshot_ocr.jpg">Receipt OCR</button>
-          <button class="ss-tab" data-ss="assets/screenshot_budgets.jpg">Budgets</button>
-          <button class="ss-tab" data-ss="assets/screenshot_multicurrency.jpg">Multi-Currency</button>
-          <button class="ss-tab" data-ss="assets/screenshot_friends.jpg">Friends</button>
+          <button class="ss-tab active" data-ss="assets/screenshot_dashboard.png">Dashboard</button>
+          <button class="ss-tab" data-ss="assets/screenshot_transactions.png">SMS Import</button>
+          <button class="ss-tab" data-ss="assets/screenshot_ocr.png">Receipt OCR</button>
+          <button class="ss-tab" data-ss="assets/screenshot_budgets.png">Budgets</button>
+          <button class="ss-tab" data-ss="assets/screenshot_accouts.png">Multi-Currency</button>
+          <button class="ss-tab" data-ss="assets/screenshot_friends.png">Friends</button>
         </div>
         <div class="ss-phone-wrap">
           <div class="phone-frame" style="margin: 0 auto;">
             <div class="phone-notch"></div>
-            <img src="assets/screenshot_dashboard.jpg" id="ss-image" class="phone-screen" alt="Money Manager Interface Screenshot" />
+            <img src="assets/screenshot_dashboard.png" id="ss-image" class="phone-screen" alt="Money Manager Interface Screenshot" />
           </div>
         </div>
         
@@ -189,7 +189,8 @@
           <p style="font-size: 2rem; font-weight: 800; margin-bottom: 16px;">Free</p>
           <p class="feature-desc">Essential features with ads.</p>
         </div>
-        <div class="feature-card" style="text-align: center; border-color: var(--teal);">
+        <div class="feature-card premium-card" style="text-align: center;">
+          <div class="premium-badge">Recommended</div>
           <h4 style="font-size: 1.5rem; color: var(--teal); margin-bottom: 8px;">Premium</h4>
           <p style="font-size: 2rem; font-weight: 800; margin-bottom: 16px;">Rs. 99<span style="font-size: 1rem; color: var(--text-secondary);">/mo</span></p>
           <p class="feature-desc">Ad-free. Also Rs. 699/yr or Rs. 1,999 Lifetime.</p>
@@ -252,13 +253,26 @@
   </section>
 
   <footer>
-    <div class="container footer-inner">
-      <span class="footer-brand">Rasmerk</span>
-      <span class="footer-copy">&copy; 2026 Rasmerk. All rights reserved.</span>
-      <nav class="footer-links" aria-label="Legal links">
-        <a href="/privacy">Privacy Policy</a>
-        <a href="/terms">Terms of Service</a>
-      </nav>
+    <div class="container footer-inner" style="flex-direction: column; gap: 32px;">
+      <div style="text-align: center;">
+        <h3 style="font-size: 1.25rem; font-weight: 700; margin-bottom: 16px;">Ready to take control?</h3>
+        <a href="https://play.google.com/store/apps/details?id=com.rasmerk.money_manager" class="btn-playstore" style="display: inline-flex;">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24"><path d="M5 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2l15-10L5 2zm1 4.3L15.5 12 6 17.7V6.3z"/></svg>
+          <div class="playstore-text">
+            <span class="ps-small">GET IT ON</span>
+            <span class="ps-large">Google Play</span>
+          </div>
+        </a>
+      </div>
+      <div style="width: 100%; height: 1px; background: var(--border);"></div>
+      <div style="display: flex; width: 100%; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px;">
+        <span class="footer-brand">Rasmerk</span>
+        <span class="footer-copy">&copy; 2026 Rasmerk. All rights reserved.</span>
+        <nav class="footer-links" aria-label="Legal links">
+          <a href="/privacy">Privacy Policy</a>
+          <a href="/terms">Terms of Service</a>
+        </nav>
+      </div>
     </div>
   </footer>
   <script src="scripts/main.js" defer></script>

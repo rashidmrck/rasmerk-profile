@@ -27,7 +27,7 @@
 }
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; }
+html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; scroll-padding-top: var(--nav-h); }
 body {
   font-family: 'Inter', system-ui, sans-serif;
   background: var(--bg-base);
@@ -154,6 +154,10 @@ section { padding: var(--section-pad) 0; }
 .feature-title { font-size: 0.95rem; font-weight: 700; margin-bottom: 6px; color: var(--text-primary); }
 .feature-desc { font-size: 0.83rem; color: var(--text-secondary); line-height: 1.55; }
 
+/* Pricing enhancements */
+.premium-card { border-color: var(--teal) !important; box-shadow: 0 0 30px var(--teal-glow) !important; position: relative; }
+.premium-badge { position: absolute; top: -12px; left: 50%; transform: translateX(-50%); background: var(--teal); color: #07090f; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; padding: 4px 12px; border-radius: 20px; box-shadow: 0 4px 12px var(--teal-glow); }
+
 #about { position: relative; z-index: 1; }
 .about-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
 .about-text p { color: var(--text-secondary); margin-bottom: 20px; font-size: 1rem; line-height: 1.75; }
@@ -255,3 +259,8 @@ footer { border-top: 1px solid var(--border); padding: 32px 0; position: relativ
 .ss-tab:hover { color: #fff; }
 .ss-tab.active { background: rgba(0,180,166,0.15); color: var(--teal); }
 .ss-phone-wrap { display: flex; justify-content: center; }
+
+@media (max-width: 600px) {
+  .phone-frame { width: 240px; height: 500px; border-width: 8px; border-radius: 32px; }
+  .phone-notch { width: 90px; height: 18px; border-bottom-left-radius: 12px; border-bottom-right-radius: 12px; }
+}
