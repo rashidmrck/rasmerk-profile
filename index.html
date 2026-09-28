@@ -27,6 +27,7 @@
       <ul id="nav-links" class="nav-links" role="list">
         <li><a href="#product">Product</a></li>
         <li><a href="#about">About</a></li>
+        <li><a href="/help">Help Center</a></li>
         <li><a href="#contact" class="nav-cta">Contact</a></li>
       </ul>
       <button id="hamburger" class="nav-hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-links">
@@ -104,9 +105,13 @@
             <p>Background parsing from 10+ banks. Zero manual entry.</p>
           </div>
           <div class="showcase-tab" data-img="assets/screenshot_ocr.png">
-            <h4>Receipt OCR &amp; Split</h4>
-            <p>Scan receipts with ML Kit. Split bills automatically.</p>
-          </div>
+              <h4>Receipt OCR</h4>
+              <p>Scan receipts locally with ML Kit.</p>
+            </div>
+            <div class="showcase-tab" data-img="assets/screenshot_ai_parser.png">
+              <h4>Cloud AI Split</h4>
+              <p>Extract and split bills instantly using Gemini AI.</p>
+            </div>
           <div class="showcase-tab" data-img="assets/screenshot_budgets.png">
             <h4>Smart Budgets</h4>
             <p>Set limits and get safe-to-spend signals automatically.</p>
@@ -159,6 +164,21 @@
           <div class="feature-icon">⏳</div>
           <h4 class="feature-title">Smart Review Queue</h4>
           <p class="feature-desc">Draft transactions wait in a pending queue for your confirmation.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">✨</div>
+          <h4 class="feature-title">Smart Auto-Fill</h4>
+          <p class="feature-desc">Intelligently suggests categories and auto-fills transaction details based on past entries.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🤖</div>
+          <h4 class="feature-title">Learned Rules</h4>
+          <p class="feature-desc">App learns custom parsing from your corrections to automate future entries.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">📊</div>
+          <h4 class="feature-title">Data Export</h4>
+          <p class="feature-desc">Export data to CSV, TSV, or Excel. You own and control your data.</p>
         </div>
       </div>
     </div>
@@ -250,6 +270,7 @@
         <span class="footer-brand">Rasmerk</span>
         <span class="footer-copy">&copy; 2026 Rasmerk. All rights reserved.</span>
         <nav class="footer-links" aria-label="Legal links">
+          <a href="/help">Help Center</a>
           <a href="/privacy">Privacy Policy</a>
           <a href="/terms">Terms of Service</a>
         </nav>

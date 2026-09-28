@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>How referral links work - Rasmerk Help Center</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/styles/main.css" />
+  <style>
+    .help-container { max-width: 800px; margin: 120px auto 60px; padding: 0 24px; color: var(--text-primary); }
+    .help-container h1 { font-size: 2.5rem; margin-bottom: 24px; color: var(--teal); }
+    .help-container h2 { font-size: 1.5rem; margin-top: 32px; margin-bottom: 16px; color: #fff; }
+    .help-container p { margin-bottom: 16px; line-height: 1.6; color: var(--text-secondary); }
+    .help-container a { color: var(--teal); text-decoration: none; }
+    .help-container a:hover { text-decoration: underline; }
+    .help-container ul, .help-container ol { margin-bottom: 16px; padding-left: 24px; color: var(--text-secondary); line-height: 1.6; }
+    .help-container li { margin-bottom: 8px; }
+    .help-container table { width: 100%; border-collapse: collapse; margin-bottom: 24px; }
+    .help-container th, .help-container td { padding: 12px; border: 1px solid var(--border); text-align: left; }
+    .help-container th { background: rgba(0, 180, 166, 0.1); color: var(--teal); font-weight: 600; }
+    .help-container blockquote { border-left: 4px solid var(--teal); margin: 0 0 16px 0; padding-left: 16px; color: var(--text-secondary); font-style: italic; }
+    .help-container pre { background: var(--bg-surface); padding: 16px; border-radius: 8px; overflow-x: auto; margin-bottom: 16px; border: 1px solid var(--border); }
+    .help-container code { font-family: monospace; color: #a4c2f4; }
+  </style>
+</head>
+<body style="background: var(--bg-base);">
+  <nav id="navbar" aria-label="Main navigation">
+    <div class="container nav-inner">
+      <a href="#hero" class="nav-logo">
+        <img src="/assets/rasmerk_logo.png" alt="Rasmerk" class="nav-logo-icon" />
+        Rasmerk
+      </a>
+      <ul id="nav-links" class="nav-links" role="list">
+        <li><a href="#product">Product</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="/help">Help Center</a></li>
+        <li><a href="#contact" class="nav-cta">Contact</a></li>
+      </ul>
+      <button id="hamburger" class="nav-hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-links">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>  <div class="help-container">
+    <h1>How referral links work</h1>
+<h2>Your referral link</h2>
+<p>Your link is in the format: <code>rasmerk.com/r/RM[6-character-code]</code></p>
+<p>Find it in <strong>Settings → Ambassador → Your Link</strong>.</p>
+<h2>What happens when a friend opens your link</h2>
+<ol>
+<li>Friend taps the link → opens Rasmerk (or prompts to install from Play Store).</li>
+<li>The referral code is captured automatically.</li>
+<li>Friend uses the app and adds at least 1 account and 1 transaction.</li>
+<li>After 5 minutes, the referral is validated by Rasmerk's server.</li>
+<li>Your account is credited with the reward days on the next sync.</li>
+</ol>
+<h2>Activation requirements (friend must meet all)</h2>
+<ul>
+<li>Installed the app via your link</li>
+<li>Signed in with a Google account</li>
+<li>Added at least 1 account</li>
+<li>Added at least 1 transaction</li>
+<li>Waited at least 5 minutes (anti-abuse cooldown)</li>
+</ul>
+<h2>When you receive the reward</h2>
+<p>Rewards are synced from the server. The app checks entitlement every 15 minutes (or on cold launch). Premium days activate immediately after sync.</p>
+<script type="application/ld+json">
+{
+"@context": "https://schema.org",
+"@type": "FAQPage",
+"mainEntity": [{
+"@type": "Question",
+"name": "How do Rasmerk referral links work?",
+"acceptedAnswer": {
+"@type": "Answer",
+"text": "Share your rasmerk.com/r/RM[code] link. When your friend installs, signs in, and adds an account + transaction, your reward is credited. A 5-minute wait is required for anti-abuse validation."
+}
+}]
+}
+</script>
+  </div>
+  <footer>
+    <div class="container footer-inner" style="flex-direction: column; gap: 32px;">
+      <div style="text-align: center;">
+        <h3 style="font-size: 1.25rem; font-weight: 700; margin-bottom: 16px;">Ready to take control?</h3>
+        <a href="https://play.google.com/store/apps/details?id=com.rasmerk.money_manager" class="btn-playstore" style="display: inline-flex;">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24"><path d="M5 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2l15-10L5 2zm1 4.3L15.5 12 6 17.7V6.3z"/></svg>
+          <div class="playstore-text">
+            <span class="ps-small">GET IT ON</span>
+            <span class="ps-large">Google Play</span>
+          </div>
+        </a>
+      </div>
+      <div style="width: 100%; height: 1px; background: var(--border);"></div>
+      <div style="display: flex; width: 100%; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px;">
+        <span class="footer-brand">Rasmerk</span>
+        <span class="footer-copy">&copy; 2026 Rasmerk. All rights reserved.</span>
+        <nav class="footer-links" aria-label="Legal links">
+          <a href="/help">Help Center</a>
+          <a href="/privacy">Privacy Policy</a>
+          <a href="/terms">Terms of Service</a>
+        </nav>
+      </div>
+    </div>
+  </footer></body>
+</html>
