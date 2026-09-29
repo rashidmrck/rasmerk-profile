@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -28,15 +28,15 @@
 <body style="background: var(--bg-base);">
   <nav id="navbar" aria-label="Main navigation">
     <div class="container nav-inner">
-      <a href="#hero" class="nav-logo">
+      <a href="/" class="nav-logo">
         <img src="/assets/rasmerk_logo.png" alt="Rasmerk" class="nav-logo-icon" />
         Rasmerk
       </a>
       <ul id="nav-links" class="nav-links" role="list">
-        <li><a href="#product">Product</a></li>
-        <li><a href="#about">About</a></li>
+        <li><a href="/#product">Product</a></li>
+        <li><a href="/#about">About</a></li>
         <li><a href="/help">Help Center</a></li>
-        <li><a href="#contact" class="nav-cta">Contact</a></li>
+        <li><a href="/#contact" class="nav-cta">Contact</a></li>
       </ul>
       <button id="hamburger" class="nav-hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-links">
         <span></span><span></span><span></span>
@@ -46,7 +46,7 @@
     <h1>How App Lock protects your data</h1>
 <p>App Lock requires <strong>biometric authentication or device PIN</strong> before showing your financial data.</p>
 <h2>How to enable</h2>
-<p>Go to <strong>Settings → Security → App Lock</strong> and toggle it on.</p>
+<p>Go to <strong>Settings â†’ Security â†’ App Lock</strong> and toggle it on.</p>
 <h2>Lock timeout options</h2>
 <table>
 <thead>
@@ -76,11 +76,11 @@
 </table>
 <h2>Security model</h2>
 <ul>
-<li>The unlocked state is <strong>in-memory only</strong> — never written to disk.</li>
+<li>The unlocked state is <strong>in-memory only</strong> â€” never written to disk.</li>
 <li>Every cold app launch starts locked, regardless of timeout setting.</li>
 <li>Authentication uses Android <code>local_auth</code> (biometric + PIN fallback).</li>
-<li>Too many failed biometric attempts → temporary lockout (requires device PIN to unlock biometrics).</li>
-<li>All authentication errors keep the app locked — there is no error path that unlocks.</li>
+<li>Too many failed biometric attempts â†’ temporary lockout (requires device PIN to unlock biometrics).</li>
+<li>All authentication errors keep the app locked â€” there is no error path that unlocks.</li>
 </ul>
 <h2>What it protects</h2>
 <p>App Lock blocks access to the entire app. Anyone who picks up your phone cannot see your balances, transactions, or accounts without your biometric or PIN.</p>
@@ -93,7 +93,7 @@
 "name": "How does App Lock work in Rasmerk?",
 "acceptedAnswer": {
 "@type": "Answer",
-"text": "App Lock uses device biometric or PIN. The unlocked state is in-memory only — never stored to disk. Every cold launch requires fresh authentication. Timeout options: Immediately, 30s, 5 min, or Never."
+"text": "App Lock uses device biometric or PIN. The unlocked state is in-memory only â€” never stored to disk. Every cold launch requires fresh authentication. Timeout options: Immediately, 30s, 5 min, or Never."
 }
 }]
 }
@@ -124,3 +124,5 @@
     </div>
   </footer></body>
 </html>
+
+

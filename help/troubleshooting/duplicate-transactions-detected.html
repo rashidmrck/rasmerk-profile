@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -28,15 +28,15 @@
 <body style="background: var(--bg-base);">
   <nav id="navbar" aria-label="Main navigation">
     <div class="container nav-inner">
-      <a href="#hero" class="nav-logo">
+      <a href="/" class="nav-logo">
         <img src="/assets/rasmerk_logo.png" alt="Rasmerk" class="nav-logo-icon" />
         Rasmerk
       </a>
       <ul id="nav-links" class="nav-links" role="list">
-        <li><a href="#product">Product</a></li>
-        <li><a href="#about">About</a></li>
+        <li><a href="/#product">Product</a></li>
+        <li><a href="/#about">About</a></li>
         <li><a href="/help">Help Center</a></li>
-        <li><a href="#contact" class="nav-cta">Contact</a></li>
+        <li><a href="/#contact" class="nav-cta">Contact</a></li>
       </ul>
       <button id="hamburger" class="nav-hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-links">
         <span></span><span></span><span></span>
@@ -47,8 +47,8 @@
 <h2>Why duplicates are rare</h2>
 <p>Rasmerk uses two deduplication layers:</p>
 <ol>
-<li><strong>SMS Message ID</strong> — each SMS has a unique system ID that is recorded after import.</li>
-<li><strong>Raw message body</strong> — the full SMS text is checked against existing transactions.</li>
+<li><strong>SMS Message ID</strong> â€” each SMS has a unique system ID that is recorded after import.</li>
+<li><strong>Raw message body</strong> â€” the full SMS text is checked against existing transactions.</li>
 </ol>
 <h2>If you see a duplicate warning</h2>
 <p>Rasmerk shows a warning when it detects a transaction that closely matches an existing one. This can happen if:</p>
@@ -59,12 +59,12 @@
 <h2>What to do</h2>
 <ol>
 <li>Open both suspected duplicates.</li>
-<li>Check the raw SMS body (if imported from SMS) — different bodies = different transactions.</li>
-<li>Check the time — two transactions at the exact same amount but different timestamps are likely legitimate.</li>
+<li>Check the raw SMS body (if imported from SMS) â€” different bodies = different transactions.</li>
+<li>Check the time â€” two transactions at the exact same amount but different timestamps are likely legitimate.</li>
 <li>Delete the duplicate if confirmed.</li>
 </ol>
 <h2>Clearing dedupe history</h2>
-<p>If you want to re-import SMS that was previously marked as imported, go to <strong>Settings → SMS Import → Clear Import History</strong>. Use with caution — this may create duplicates.</p>
+<p>If you want to re-import SMS that was previously marked as imported, go to <strong>Settings â†’ SMS Import â†’ Clear Import History</strong>. Use with caution â€” this may create duplicates.</p>
 <script type="application/ld+json">
 {
 "@context": "https://schema.org",
@@ -105,3 +105,5 @@
     </div>
   </footer></body>
 </html>
+
+
