@@ -1,10 +1,12 @@
-[{
-  "relation": ["delegate_permission/common.handle_all_urls"],
-  "target": {
-    "namespace": "android_app",
-    "package_name": "com.rasmerk.money_manager",
-    "sha256_cert_fingerprints": [
-      "00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00"
-    ]
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.rasmerk.money_manager",
+      "sha256_cert_fingerprints": [
+        "43:78:8D:91:B8:6C:FE:22:F0:06:0F:01:FD:23:79:40:5C:9F:9A:70:1E:BF:31:AD:A0:27:93:54:7E:6E:0F:96"
+      ]
+    }
   }
-}]
+]
