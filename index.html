@@ -26,9 +26,9 @@
       </a>
       <ul id="nav-links" class="nav-links" role="list">
         <li><a href="#product">Product</a></li>
-        <li><a href="#about">About</a></li>
+        <li><a href="#pricing">Pricing</a></li>
         <li><a href="/help">Help Center</a></li>
-        <li><a href="#contact" class="nav-cta">Contact</a></li>
+        <li><a href="https://play.google.com/store/apps/details?id=com.rasmerk.money_manager" class="nav-cta">Get the app</a></li>
       </ul>
       <button id="hamburger" class="nav-hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-links">
         <span></span><span></span><span></span>
@@ -36,12 +36,12 @@
     </div>
   </nav>
 
-    <section id="hero" class="app-hero" style="padding-top: 80px;">
+    <section id="hero" class="app-hero">
     <div class="container hero-inner app-hero-inner">
       <div class="hero-content">
-        <h1 class="hero-brand gradient-text">Money Manager</h1>
-        <p class="hero-tagline">Personal finance, automated and intelligent.</p>
-        <p class="hero-subtext" style="color: var(--text-secondary); margin-bottom: 2rem;">Privacy-First &middot; Automated &middot; Intelligent</p>
+        <p class="hero-eyebrow">Money Manager by Rasmerk</p>
+        <h1 class="hero-brand">Track spending automatically.</h1>
+        <p class="hero-tagline">Import transactions from bank SMS, scan receipts, and see what you can spend. Your core money tracking works offline.</p>
         <div class="hero-actions">
           <a href="https://play.google.com/store/apps/details?id=com.rasmerk.money_manager" class="btn-playstore">
             <svg viewBox="0 0 24 24" fill="currentColor" width="28" height="28"><path d="M5 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2l15-10L5 2zm1 4.3L15.5 12 6 17.7V6.3z"/></svg>
@@ -50,14 +50,12 @@
               <span class="ps-large">Google Play</span>
             </div>
           </a>
-          <a href="#product" class="btn btn-outline" style="padding: 12px 24px;">See Features</a>
+          <a href="#product" class="btn btn-outline">See the app</a>
         </div>
       </div>
-      <div class="hero-photo-wrap">
-        <div class="hero-app-icon" style="width:160px; height:160px; border-radius:36px; box-shadow: 0 16px 40px rgba(0,180,166,0.3); overflow:hidden;">
-          <img src="assets/money_manager_logo.png" alt="Money Manager Logo" style="width:100%; height:100%; object-fit:cover;" />
-        </div>
-      </div>
+      <figure class="hero-preview">
+        <img src="assets/screenshot_dashboard.png" alt="Money Manager dashboard showing balances, recent transactions, and spending insights" fetchpriority="high" />
+      </figure>
     </div>
   </section>
 
@@ -67,21 +65,21 @@
         <div class="diff-icon">🔒</div>
         <div class="diff-text">
           <h4>Offline-First</h4>
-          <p>Local storage, maximum privacy.</p>
+          <p>Core tracking and receipt scanning run on your device.</p>
         </div>
       </div>
       <div class="diff-card">
         <div class="diff-icon">📥</div>
         <div class="diff-text">
-          <h4>Smart Sync</h4>
-          <p>Auto-import from SMS and Receipt OCR.</p>
+          <h4>Automatic Imports</h4>
+          <p>Turn bank messages and scanned receipts into transactions.</p>
         </div>
       </div>
       <div class="diff-card">
         <div class="diff-icon">🧠</div>
         <div class="diff-text">
-          <h4>Gets Smarter</h4>
-          <p>AI learns from your categorizations.</p>
+          <h4>Learns Your Categories</h4>
+          <p>Get category suggestions based on how you organize past expenses.</p>
         </div>
       </div>
     </div>
@@ -89,49 +87,82 @@
 
     <section id="product">
     <div class="container">
-      <div class="product-header reveal" style="text-align: center; margin-bottom: 60px;">
-        <h2 class="section-title">Everything you need.</h2>
-        <p class="section-subtitle" style="max-width: 600px; margin: 16px auto 0;">A complete toolkit for your financial life. Click the features below to see them in action.</p>
+      <div class="product-header">
+        <p class="section-eyebrow">Inside the app</p>
+        <h2 class="section-title">See Money Manager in action</h2>
       </div>
-      
-      <div class="interactive-showcase reveal reveal-delay-1">
-        <div class="showcase-sidebar">
-          <div class="showcase-tab active" data-img="assets/screenshot_dashboard.png">
-            <h4>Dashboard &amp; Analytics</h4>
-            <p>Track net worth and monthly spend in real time.</p>
+      <div class="interactive-showcase">
+        <details class="showcase-feature" name="product-preview" open>
+          <summary>
+            <span class="showcase-title">Dashboard &amp; Analytics</span>
+            <span class="showcase-description">See balances, recent transactions, and spending in one place.</span>
+          </summary>
+          <div class="showcase-preview">
+            <img class="app-screen" src="assets/screenshot_dashboard.png" alt="Money Manager Dashboard &amp; Analytics screen" loading="lazy" />
           </div>
-          <div class="showcase-tab" data-img="assets/screenshot_transactions.png">
-            <h4>SMS Auto-Import</h4>
-            <p>Background parsing from 10+ banks. Zero manual entry.</p>
+        </details>
+        <details class="showcase-feature" name="product-preview">
+          <summary>
+            <span class="showcase-title">SMS Auto-Import</span>
+            <span class="showcase-description">Automatically import transactions from supported bank messages.</span>
+          </summary>
+          <div class="showcase-preview">
+            <img class="app-screen" src="assets/screenshot_transactions.png" alt="Money Manager SMS Auto-Import screen" loading="lazy" />
           </div>
-          <div class="showcase-tab" data-img="assets/screenshot_ocr.png">
-              <h4>Receipt OCR</h4>
-              <p>Scan receipts locally with ML Kit.</p>
+        </details>
+        <details class="showcase-feature" name="product-preview">
+          <summary>
+            <span class="showcase-title">Receipt Scanning</span>
+            <span class="showcase-description">Scan receipts on your device and review the details before saving.</span>
+          </summary>
+          <div class="showcase-preview">
+            <img class="app-screen" src="assets/screenshot_ocr.png" alt="Money Manager Receipt Scanning screen" loading="lazy" />
+          </div>
+        </details>
+        <details class="showcase-feature" name="product-preview">
+          <summary>
+            <span class="showcase-title">Smart Budgets</span>
+            <span class="showcase-description">Set limits and see how much you have left to spend.</span>
+          </summary>
+          <div class="showcase-preview">
+            <img class="app-screen" src="assets/screenshot_budgets.png" alt="Money Manager Smart Budgets screen" loading="lazy" />
+          </div>
+        </details>
+        <details class="showcase-feature" name="product-preview">
+          <summary>
+            <span class="showcase-title">Multi-Currency</span>
+            <span class="showcase-description">Track accounts in different currencies.</span>
+          </summary>
+          <div class="showcase-preview">
+            <img class="app-screen" src="assets/screenshot_accouts.png" alt="Money Manager Multi-Currency screen" loading="lazy" />
+          </div>
+        </details>
+        <details class="showcase-feature" name="product-preview">
+          <summary>
+            <span class="showcase-title">Friends &amp; Loans</span>
+            <span class="showcase-description">Keep track of IOUs and loans in the app.</span>
+          </summary>
+          <div class="showcase-preview">
+            <img class="app-screen" src="assets/screenshot_friends.png" alt="Money Manager Friends &amp; Loans screen" loading="lazy" />
+          </div>
+        </details>
+        <details class="showcase-feature" name="product-preview">
+          <summary>
+            <span class="showcase-title">Cloud AI Split</span>
+            <span class="showcase-description">Extract bill items to split with friends using Gemini AI.</span>
+          </summary>
+          <div class="showcase-preview">
+            <div class="showcase-workflow">
+              <h3>Split an itemized bill</h3>
+              <ol>
+                <li>Scan or upload the bill.</li>
+                <li>Review the items extracted by Gemini.</li>
+                <li>Assign items to friends and review their shares.</li>
+              </ol>
+              <p>This Premium feature uses an internet connection.</p>
             </div>
-            <div class="showcase-tab" data-img="assets/screenshot_ai_parser.png">
-              <h4>Cloud AI Split</h4>
-              <p>Extract and split bills instantly using Gemini AI.</p>
-            </div>
-          <div class="showcase-tab" data-img="assets/screenshot_budgets.png">
-            <h4>Smart Budgets</h4>
-            <p>Set limits and get safe-to-spend signals automatically.</p>
           </div>
-          <div class="showcase-tab" data-img="assets/screenshot_accouts.png">
-            <h4>Multi-Currency</h4>
-            <p>Live FX rates. 8+ currencies. Fully offline.</p>
-          </div>
-          <div class="showcase-tab" data-img="assets/screenshot_friends.png">
-            <h4>Friends &amp; Loans</h4>
-            <p>Track IOUs and loans directly in the app.</p>
-          </div>
-        </div>
-        
-        <div class="showcase-phone-area">
-          <div class="phone-frame">
-            <div class="phone-notch"></div>
-            <img src="assets/screenshot_dashboard.png" alt="Money Manager Dashboard Screenshot" id="showcase-image" class="phone-screen" />
-          </div>
-        </div>
+        </details>
       </div>
     </div>
   </section>
@@ -188,27 +219,27 @@
     <div class="container">
       <div class="reveal" style="text-align:center; margin-bottom:56px;">
         <p class="section-eyebrow">Pricing</p>
-        <h2 class="section-title">Simple, transparent pricing.</h2>
+        <h2 class="section-title">Start free. Upgrade when you need more.</h2>
         <div class="teal-divider"></div>
       </div>
-      <div class="features-grid reveal reveal-delay-1" style="max-width: 1100px; margin: 0 auto;">
-        <div class="feature-card" style="text-align: center;">
-          <h4 style="font-size: 1.5rem; color: var(--teal); margin-bottom: 8px;">Basic</h4>
-          <p style="font-size: 2rem; font-weight: 800; margin-bottom: 16px;">Free</p>
-          <p class="feature-desc">Essential features with ads.</p>
-        </div>
-        <div class="feature-card premium-card" style="text-align: center;">
-          <div class="premium-badge">Recommended</div>
-          <h4 style="font-size: 1.5rem; color: var(--teal); margin-bottom: 8px;">Premium</h4>
-          <p style="font-size: 2rem; font-weight: 800; margin-bottom: 16px;">Rs. 99<span style="font-size: 1rem; color: var(--text-secondary);">/mo</span></p>
-          <p class="feature-desc">Ad-free. Cloud AI Parser included.<br>Also Rs. 699/yr or Rs. 1,999 Lifetime.</p>
-        </div>
-        <div class="feature-card" style="text-align: center; border-color: rgba(0, 180, 166, 0.4);">
-          <h4 style="font-size: 1.5rem; color: var(--teal); margin-bottom: 8px;">Ambassador</h4>
-          <p style="font-size: 2rem; font-weight: 800; margin-bottom: 16px;">Free</p>
-          <p class="feature-desc">Invite friends or family.<br>Unlock full Premium features at zero cost.</p>
-        </div>
+      <div class="pricing-grid">
+        <article class="feature-card">
+          <h3>Free</h3>
+          <p class="plan-price">₹0</p>
+          <p class="feature-desc">Track expenses, import bank SMS, and set budgets. Includes ads.</p>
+        </article>
+        <article class="feature-card premium-card">
+          <h3>Premium</h3>
+          <p class="plan-price">₹99 <span>/ month</span></p>
+          <p class="feature-desc">Go ad-free and unlock Cloud AI bill splitting.</p>
+          <p class="feature-desc">₹699 per year or ₹1,999 lifetime.</p>
+        </article>
       </div>
+      <p class="pricing-links"><a href="/help/premium-ambassador/free-vs-premium-limits.html">Compare plan limits</a></p>
+      <aside class="ambassador-note">
+        <h3>Earn Premium through referrals</h3>
+        <p>Invite friends through the Ambassador Program to earn Premium days. <a href="/help/premium-ambassador/what-is-ambassador-program.html">See how it works</a></p>
+      </aside>
     </div>
   </section>
 
@@ -222,14 +253,14 @@
             <div class="teal-divider" style="margin-left:0;"></div>
           </div>
           <p><span class="about-highlight">Rasmerk</span> is an independent software brand focused on building tools that solve real, everyday problems &mdash; starting with personal finance.</p>
-          <p>Money Manager was born from a simple frustration: existing personal finance apps were either too complex, locked behind cloud accounts, or failed to automate transaction logging. So we built a privacy-first, fully local alternative.</p>
-          <p>Every feature is designed to put you in control. The goal is software that remains <span class="about-highlight">fast, private, and offline-first</span> &mdash; getting out of your way while quietly organizing your financial life.</p>
+          <p>Money Manager was born from a simple frustration: existing personal finance apps were either too complex, locked behind cloud accounts, or failed to automate transaction logging. Core tracking, SMS imports, and standard receipt scanning work on your device.</p>
+          <p>Optional features use online services. Google Drive is used for Drive backups, and Gemini processes bills when you choose Cloud AI Split. <a class="text-link" href="/privacy/">Read our privacy policy</a>.</p>
         </div>
         <div class="stat-grid reveal reveal-delay-1">
           <div class="stat-card"><div class="stat-number">10+</div><div class="stat-label">Banks Supported</div></div>
           <div class="stat-card"><div class="stat-number">8+</div><div class="stat-label">Currencies</div></div>
           <div class="stat-card"><div class="stat-number">5</div><div class="stat-label">Import Sources</div></div>
-          <div class="stat-card"><div class="stat-number">0</div><div class="stat-label">Cloud Required</div></div>
+          <div class="stat-card"><div class="stat-number">0</div><div class="stat-label">Cloud Required for Core Tracking</div></div>
         </div>
       </div>
     </div>
